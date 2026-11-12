@@ -1,0 +1,29 @@
+<!-- Hrishik C S 2026BCS0277 -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+</head>
+<body>
+<h2>Program</h2>
+<p id="demo"></p>
+<script>
+let output = "";
+output += "<h3>3. Battery Monitor</h3>";
+let battery = 100;
+while (battery > 0) {
+  battery -= 15;
+  if (battery <= 0) {
+    battery = 0;
+    output += "Battery: 0% - Phone shut down<br>";
+    break;
+  }
+  output += "Battery: " + battery + "%<br>";
+  if (battery < 20) {
+    output += "Warning: Battery low!<br>";
+  }
+}
+document.getElementById("demo").innerHTML = output;
+</script>
+</body>
+</html>
